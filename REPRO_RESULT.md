@@ -86,7 +86,11 @@ Inner markdown rendered: NO (BUG: HTML block consumes everything until </details
 
 ## Mode 2 — `npm run dev` (`@ox-content/vite-plugin` SSG dev server)
 
-Visiting `http://localhost:5175/` in a browser shows the same bug. The `<article class="content">` body that ox-content's SSG layout produces from `src/content/index.md` contains:
+Visiting `http://localhost:5175/` in a browser shows the same bug:
+
+![ox-content dev server rendering inner Markdown of <details> as raw text](./assets/dev-server-screenshot.png)
+
+The `<article class="content">` body that ox-content's SSG layout produces from `src/content/index.md` contains:
 
 ```html
 <article class="content">
