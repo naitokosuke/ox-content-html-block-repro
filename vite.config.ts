@@ -1,0 +1,11 @@
+import { defineConfig } from "vite-plus";
+import { oxContent } from "@ox-content/vite-plugin";
+
+export default defineConfig({
+  plugins: [
+    oxContent({
+      srcDir: "src/content",
+      gfm: true,
+    }),
+  ],
+});

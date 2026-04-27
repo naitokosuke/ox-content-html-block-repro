@@ -1,0 +1,20 @@
+{
+  "name": "ox-content-html-block-repro",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "repro": "node repro.mjs",
+    "dev": "vp dev",
+    "build": "vp build",
+    "preview": "vp preview"
+  },
+  "dependencies": {
+    "@ox-content/napi": "2.4.0",
+    "@ox-content/vite-plugin": "2.4.0"
+  },
+  "devDependencies": {
+    "vite-plus": "^0.1.19"
+  },
+  "packageManager": "npm@11.13.0"
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ox-content HTML block repro</title>
+    <style>
+      body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+      h1 { font-size: 1.25rem; }
+      h2 { font-size: 1rem; margin-top: 2rem; border-bottom: 1px solid #ccc; padding-bottom: 0.25rem; }
+      pre { background: #f4f4f4; padding: 0.75rem; overflow-x: auto; font-size: 0.85rem; }
+      .rendered { border: 1px solid #ccc; padding: 1rem; border-radius: 4px; }
+      .note { background: #fff8e1; border-left: 4px solid #ffb300; padding: 0.5rem 1rem; }
+    </style>
+  </head>
+  <body>
+    <h1>ox-content HTML block repro</h1>
+    <p class="note">
+      The Markdown source below opens a <code>&lt;details&gt;</code> tag,
+      then has a blank line, then Markdown syntax (bold / list / fenced code),
+      then a blank line, then <code>&lt;/details&gt;</code>.
+      Per CommonMark §4.6 (Type 6 HTML block) the inner Markdown should be parsed.
+      ox-content emits it as raw text instead.
+    </p>
+    <h2>Rendered HTML (what ox-content's vite plugin produces)</h2>
+    <div class="rendered" id="app"></div>
+    <h2>Raw HTML string returned by the plugin</h2>
+    <pre id="raw"></pre>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
